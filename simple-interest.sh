@@ -1,12 +1,28 @@
-# Simple interest calc SI = P × R × T, where P = Principal, R = Rate of Interest, and T = Time period.
+   #!/bin/bash
+   # This script calculates simple interest given principal,
+   # annual rate of interest and time period in years.
 
-## input time, rate, principal
-time = float(input(" Enter length of loan in years")) 
-Rate_of_Interest = float(input("Enter interest rate"))
-Principal = float(input("Enter amount borrowed or loaned"))
+   # Do not use this in production. Sample purpose only.
 
-##Calculate SI
-SI = Principal × Rate_of_Interest × time
+   # Author: Upkar Lidder (IBM)
+   # Additional Authors:
+   # <your GitHub username>
 
-## display total amount financed or borrowed 
-print("The total amount financed or borrowed is $:{SI}")
+   # Input:
+   # p, principal amount
+   # t, time period in years
+   # r, annual rate of interest
+
+   # Output:
+   # simple interest = p*t*r
+
+   echo "Enter the principal:"
+   read p
+   echo "Enter rate of interest per year:"
+   read r
+   echo "Enter time period in years:"
+   read t
+
+   s=`expr $p \* $t \* $r / 100`
+   echo "The simple interest is: "
+   echo $s
